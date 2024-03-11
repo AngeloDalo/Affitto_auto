@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Device;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreDeviceRequest;
-use App\Http\Requests\UpdateDeviceRequest;
+use Illuminate\Http\Request;
 
-class DeviceController extends Controller
+class LicenceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,10 +30,10 @@ class DeviceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDeviceRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDeviceRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -43,10 +41,10 @@ class DeviceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Device  $device
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Device $device)
+    public function show($id)
     {
         //
     }
@@ -54,10 +52,10 @@ class DeviceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Device  $device
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Device $device)
+    public function edit($id)
     {
         //
     }
@@ -65,11 +63,11 @@ class DeviceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDeviceRequest  $request
-     * @param  \App\Models\Device  $device
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDeviceRequest $request, Device $device)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +75,10 @@ class DeviceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Device  $device
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Device $device)
+    public function destroy($id)
     {
         //
     }

@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Licence;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreLicenceRequest;
-use App\Http\Requests\UpdateLicenceRequest;
+use Illuminate\Http\Request;
 
-class LicenceController extends Controller
+class DriverController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,10 +30,10 @@ class LicenceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLicenceRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreLicenceRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -43,10 +41,10 @@ class LicenceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Licence  $licence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Licence $licence)
+    public function show($id)
     {
         //
     }
@@ -54,10 +52,10 @@ class LicenceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Licence  $licence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Licence $licence)
+    public function edit($id)
     {
         //
     }
@@ -65,11 +63,11 @@ class LicenceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLicenceRequest  $request
-     * @param  \App\Models\Licence  $licence
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateLicenceRequest $request, Licence $licence)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +75,10 @@ class LicenceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Licence  $licence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Licence $licence)
+    public function destroy($id)
     {
         //
     }

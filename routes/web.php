@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('guest.welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')
+    ->namespace('Admin')
+    ->name('admin.') //name
+    ->prefix('admin') //uri
+    ->group(function () {
+        Route::get('/', 'HomeController@index')->name('home');
+        Route::resource('drivers', 'DriverController');
+        Route::resource('vehicles', 'VehicleController');
+    });
+
+Route::get('{any?}', function ($name = null) {
+    return view('guest.welcome');
+})->where('any', '.*');
+
+
