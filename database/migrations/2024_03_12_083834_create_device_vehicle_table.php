@@ -13,19 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('drivers', function (Blueprint $table) {
-            $table->id();
-            $table->string('phone');
-            $table->date('b-day');
-            $table->string('name');
-            $table->string('surname');
+        Schema::create('device_vehicle', function (Blueprint $table) {
+            $table->unsignedBigInteger('device_id');
+            $table->foreign('device_id')
+                ->references('id')
+                ->on('devices');
 
             $table->unsignedBigInteger('vehicle_id');
             $table->foreign('vehicle_id')
                 ->references('id')
                 ->on('vehicles');
 
-            $table->timestamps();
+            $table->primary(['device_id', 'vehicle_id']);
         });
     }
 
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('drivers');
+        Schema::dropIfExists('device_vehicle');
     }
 };

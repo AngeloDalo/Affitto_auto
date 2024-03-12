@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->string('color');
+            $table->string('fuel');
+            $table->float('max-weight');
+            $table->string('type');
             $table->timestamps();
         });
     }

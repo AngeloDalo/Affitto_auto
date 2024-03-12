@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 class Vehicle extends Model
 {
     protected $fillable = [
-        'plate',
         'color',
         'fuel',
         'max-weight',

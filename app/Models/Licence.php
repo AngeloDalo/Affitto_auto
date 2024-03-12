@@ -9,8 +9,7 @@ use Illuminate\Support\Str;
 class Licence extends Model
 {
     protected $fillable = [
-        'code',
-        'cayegory',
+        'category',
         'created_at',
         'updated_at'
     ];
