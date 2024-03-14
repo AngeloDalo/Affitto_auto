@@ -11,7 +11,7 @@ class Vehicle extends Model
     protected $fillable = [
         'color',
         'fuel',
-        'max-weight',
+        'max_weight',
         'type',
         'created_at',
         'updated_at'

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('color');
             $table->string('fuel');
-            $table->float('max-weight');
+            $table->float('max_weight');
             $table->string('type');
             $table->timestamps();
         });
