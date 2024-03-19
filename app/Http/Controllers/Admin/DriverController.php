@@ -19,7 +19,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $drivers = Driver::orderBy('name', 'desc')->paginate(20);
+        $drivers = Driver::orderBy('name', 'desc')->get();
         return view('admin.drivers.index', ['drivers' => $drivers]);
     }
 

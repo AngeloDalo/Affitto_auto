@@ -21,7 +21,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Driver::orderBy('id', 'desc')->paginate(20);
+        $vehicles = Driver::orderBy('id', 'desc');
         return view('admin.vehicles.index', ['vehicles' => $vehicles]);
     }
 
