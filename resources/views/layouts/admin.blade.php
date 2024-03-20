@@ -62,7 +62,7 @@
                     <span>{{ Auth::user()->name }}</span>
                   </a>
                   <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                    <li><a class="dropdown-item" href="{{ route('admin.posts.create') }}">New project...</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.vehicles.create') }}">New Vehicle...</a></li>
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><hr class="dropdown-divider"></li>
